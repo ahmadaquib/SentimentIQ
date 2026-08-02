@@ -1,0 +1,3 @@
+id,timestamp,text,sentiment,emotion,feeling,sarcasm,confidence
+1,2026-08-02T11:47:13.111322,I am so thrilled and grateful for this incredible promotion at work!,Positive,Joy,Grateful,False,0.6323
+2,2026-08-02T11:47:18.065063,I am so thrilled and grateful for this incredible promotion at work!,Positive,Joy,Grateful,False,0.6323

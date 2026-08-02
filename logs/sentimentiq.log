@@ -1,0 +1,153 @@
+2026-08-02 11:27:05 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:27:05 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:27:06 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:27:10 [INFO] SentimentIQ.Predictor: Loading HuggingFace sarcasm model (helinivan/english-sarcasm-detector)...
+2026-08-02 11:27:10 [WARNING] SentimentIQ.Predictor: Sarcasm pipeline could not be loaded (using fallback): Could not load model helinivan/english-sarcasm-detector with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSequenceClassification'>, <class 'transformers.models.bert.modeling_bert.BertForSequenceClassification'>). See the original errors:
+
+while loading with AutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\pipelines\base.py", line 232, in load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\models\auto\auto_factory.py", line 405, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 4204, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 747, in _get_resolved_checkpoint_files
+    raise OSError(
+    ...<2 lines>...
+    )
+OSError: helinivan/english-sarcasm-detector does not appear to have a file named pytorch_model.bin or model.safetensors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\pipelines\base.py", line 248, in load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\models\auto\auto_factory.py", line 405, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 4204, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 747, in _get_resolved_checkpoint_files
+    raise OSError(
+    ...<2 lines>...
+    )
+OSError: helinivan/english-sarcasm-detector does not appear to have a file named pytorch_model.bin or model.safetensors.
+
+while loading with BertForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\pipelines\base.py", line 232, in load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 4204, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 747, in _get_resolved_checkpoint_files
+    raise OSError(
+    ...<2 lines>...
+    )
+OSError: helinivan/english-sarcasm-detector does not appear to have a file named pytorch_model.bin or model.safetensors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\pipelines\base.py", line 248, in load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 4204, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\MLOps Engineer\Workspace\Projects\SentimentIQ\.venv\Lib\site-packages\transformers\modeling_utils.py", line 747, in _get_resolved_checkpoint_files
+    raise OSError(
+    ...<2 lines>...
+    )
+OSError: helinivan/english-sarcasm-detector does not appear to have a file named pytorch_model.bin or model.safetensors.
+
+
+
+2026-08-02 11:27:10 [INFO] SentimentIQ.CSVLogger: Logged prediction #1 for text: 'CSV logger integration test se...'
+2026-08-02 11:27:10 [INFO] SentimentIQ.CSVLogger: Logged prediction #2 for text: 'I love this amazing product!...'
+2026-08-02 11:27:10 [INFO] SentimentIQ.CSVLogger: Logged prediction #3 for text: 'Batch item 1...'
+2026-08-02 11:27:10 [INFO] SentimentIQ.CSVLogger: Logged prediction #4 for text: 'Batch item 2...'
+2026-08-02 11:27:10 [INFO] SentimentIQ.CSVLogger: Logged prediction #5 for text: 'Batch item 3...'
+2026-08-02 11:27:10 [INFO] SentimentIQ.CSVLogger: Cleared all prediction logs from CSV.
+2026-08-02 11:27:27 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:27:30 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:27:30 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:27:30 [INFO] SentimentIQ.MainAPI: FastAPI Server starting up on http://127.0.0.1:8000
+2026-08-02 11:27:34 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:27:36 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:27:36 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:28:05 [INFO] SentimentIQ.Predictor: Loading HuggingFace sarcasm model (helinivan/english-sarcasm-detector)...
+2026-08-02 11:28:14 [INFO] SentimentIQ.Predictor: Loading HuggingFace sarcasm model (helinivan/english-sarcasm-detector)...
+2026-08-02 11:30:02 [INFO] SentimentIQ.Predictor: Sarcasm pipeline loaded successfully!
+2026-08-02 11:30:02 [INFO] SentimentIQ.CSVLogger: Logged prediction #1 for text: 'I am so thrilled and grateful ...'
+2026-08-02 11:30:02 [INFO] SentimentIQ.CSVLogger: Logged prediction #1 for text: 'I am so thrilled and grateful ...'
+2026-08-02 11:43:40 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:43:58 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:43:58 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:44:00 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:44:01 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:44:01 [INFO] SentimentIQ.MainAPI: FastAPI Server starting up on http://127.0.0.1:8000
+2026-08-02 11:44:01 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:45:21 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:45:21 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:45:21 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:45:24 [WARNING] SentimentIQ.Predictor: Sarcasm pipeline could not be loaded (using fallback): Could not import module 'pipeline'. Are this object's requirements defined correctly?
+2026-08-02 11:45:24 [INFO] SentimentIQ.CSVLogger: Logged prediction #2 for text: 'CSV logger integration test se...'
+2026-08-02 11:45:24 [INFO] SentimentIQ.CSVLogger: Logged prediction #3 for text: 'I love this amazing product!...'
+2026-08-02 11:45:24 [INFO] SentimentIQ.CSVLogger: Logged prediction #4 for text: 'Batch item 1...'
+2026-08-02 11:45:24 [INFO] SentimentIQ.CSVLogger: Logged prediction #5 for text: 'Batch item 2...'
+2026-08-02 11:45:25 [INFO] SentimentIQ.CSVLogger: Logged prediction #6 for text: 'Batch item 3...'
+2026-08-02 11:45:25 [INFO] SentimentIQ.CSVLogger: Cleared all prediction logs from CSV.
+2026-08-02 11:46:35 [INFO] SentimentIQ.Predictor: Loading vectorizer from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\vectorizer.pkl...
+2026-08-02 11:46:35 [INFO] SentimentIQ.Predictor: Loading sentiment model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\sentiment_model.pkl...
+2026-08-02 11:46:36 [INFO] SentimentIQ.Predictor: Loading emotion model from C:\MLOps Engineer\Workspace\Projects\SentimentIQ\models\emotion_model.pkl...
+2026-08-02 11:46:37 [WARNING] SentimentIQ.Predictor: Sarcasm pipeline could not be loaded (using fallback): Could not import module 'pipeline'. Are this object's requirements defined correctly?
+2026-08-02 11:46:37 [INFO] SentimentIQ.CSVLogger: Logged prediction #1 for text: 'CSV logger integration test se...'
+2026-08-02 11:46:37 [INFO] SentimentIQ.CSVLogger: Logged prediction #2 for text: 'I love this amazing product!...'
+2026-08-02 11:46:37 [INFO] SentimentIQ.CSVLogger: Logged prediction #3 for text: 'Batch item 1...'
+2026-08-02 11:46:37 [INFO] SentimentIQ.CSVLogger: Logged prediction #4 for text: 'Batch item 2...'
+2026-08-02 11:46:37 [INFO] SentimentIQ.CSVLogger: Logged prediction #5 for text: 'Batch item 3...'
+2026-08-02 11:46:37 [INFO] SentimentIQ.CSVLogger: Cleared all prediction logs from CSV.
+2026-08-02 11:47:13 [WARNING] SentimentIQ.Predictor: Sarcasm pipeline could not be loaded (using fallback): Could not import module 'pipeline'. Are this object's requirements defined correctly?
+2026-08-02 11:47:13 [INFO] SentimentIQ.CSVLogger: Logged prediction #1 for text: 'I am so thrilled and grateful ...'
+2026-08-02 11:47:18 [WARNING] SentimentIQ.Predictor: Sarcasm pipeline could not be loaded (using fallback): Could not import module 'pipeline'. Are this object's requirements defined correctly?
+2026-08-02 11:47:18 [INFO] SentimentIQ.CSVLogger: Logged prediction #2 for text: 'I am so thrilled and grateful ...'
