@@ -5,7 +5,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.57+-red.svg)](https://streamlit.io/)
 [![Package Manager: uv](https://img.shields.io/badge/uv-managed-purple.svg)](https://github.com/astral-sh/uv)
 
-**SentimentIQ** is an end-to-end, production-grade Natural Language Processing (NLP) platform that goes beyond basic positive/negative classification. It synthesizes **Sentiment Analysis**, **Emotion Detection**, **Fine-Grained Human Feelings Mapping**, and **Sarcasm/Irony Detection** into a unified, real-time intelligence engine.
+**SentimentIQ** is an end-to-end Natural Language Processing (NLP) platform that goes beyond basic positive/negative classification. It synthesizes **Sentiment Analysis**, **Emotion Detection**, **Fine-Grained Human Feelings Mapping**, and **Sarcasm/Irony Detection** into a unified, real-time intelligence engine.
 
 ---
 
@@ -77,7 +77,7 @@ pip install uv
 ### 2. Environment Setup
 Clone the repository and install all dependencies:
 ```bash
-git clone https://github.com/aquib-github/SentimentIQ.git
+git clone https://github.com/ahmadaquib/SentimentIQ.git
 cd SentimentIQ
 uv sync
 ```
@@ -149,7 +149,7 @@ uv run python run.py
 - `02_emotion_exploration.ipynb`: EDA on emotion categories.
 - `03_go_emotions_exploration.ipynb`: EDA and mapping table for 28 fine-grained emotions.
 - `04_sentiment_training.ipynb`: TF-IDF vectorizer fitting & sentiment Logistic Regression model training.
-- `05_emotion_training.ipynb`: Emotion classifier training reusing Day 2 TF-IDF feature space.
+- `05_emotion_training.ipynb`: Emotion classifier training reusing the sentiment TF-IDF feature space.
 - `06_generate_demo_data.ipynb`: Automated script populating analytics dashboard with demo predictions.
 
 ---
